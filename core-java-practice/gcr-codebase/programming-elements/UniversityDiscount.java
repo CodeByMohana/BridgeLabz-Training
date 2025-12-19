@@ -9,5 +9,6 @@ public class UniversityDiscount {
 		double discountPercent = sc.nextDouble();
 		double discount = (discountPercent / 100.0) * fee;
 		System.out.println("The dicount amount is INR " + discount + " and final discounted fee is INR " + (fee - discount));
+		sc.close();
 	}
 }

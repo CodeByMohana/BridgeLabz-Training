@@ -22,6 +22,7 @@ public class DoubleOperation {
 
 		System.out.printf("The results of Int Operations are %.2f, %.2f, %.2f, %.2f ", result1, result2, result3,
 				result4);
+		sc.close();
 	}
 
 }

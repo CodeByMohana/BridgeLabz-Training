@@ -8,5 +8,6 @@ public class FeetConverter {
 		int yards = feet / 3;
 		int miles = yards / 1760;
 		System.out.println(" The given feet " + feet + " while in yards is " + yards + " and miles is " + miles);
+		sc.close();
 	}
 }

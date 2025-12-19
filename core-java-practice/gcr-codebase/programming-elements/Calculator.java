@@ -24,6 +24,7 @@ public class Calculator {
 	        } else {
 	            System.out.println("Division = Undefined (cannot divide by zero)");
 	        }
+	        sc.close();
 	    }
 
 }

@@ -7,5 +7,6 @@ public class SideOfSquare {
 		int perimeter = sc.nextInt();
 		int side = perimeter / 4;
 		System.out.println("Side of a square for the given perimeter is: " + side);
+		sc.close();
 	}
 }
