@@ -46,3 +46,17 @@ Each topic is implemented in **separate folders** within the repository for clar
 - 📁 Control Flows  
   🔗 Folder Link: [Click here](https://github.com/CodeByMohana/BridgeLabz-Training/tree/core-java-practice/core-java-practice/gcr-codebase/control-flows)
 
+  ---
+  
+### 🔹 20 Dec 2025 — Arrays
+**Activities**
+- Solved programming problems based on arrays
+- Implemented both 1-D and 2-D arrays
+
+**Concepts Covered**
+- 1-D Arrays, 2-D Arrays
+
+**Repository Reference**
+- 📁 Arrays  
+  🔗 Folder Link: [Click here](https://github.com/CodeByMohana/BridgeLabz-Training/tree/core-java-practice/core-java-practice/gcr-codebase/arrays)
+
