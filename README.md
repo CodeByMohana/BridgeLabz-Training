@@ -30,7 +30,7 @@ Each topic is implemented in **separate folders** within the repository for clar
 
 **Repository Reference**
 - 📁 Java Fundamentals  
-  🔗 Folder Link: [Click here](https://github.com/CodeByMohana/BridgeLabz-Training/tree/core-java-practice/core-java-practice/gcr-codebase/programming-elementsE)
+  🔗 Folder Link: [Click here](https://github.com/CodeByMohana/BridgeLabz-Training/tree/core-java-practice/core-java-practice/gcr-codebase/programming-elements)
 
 ---
 
