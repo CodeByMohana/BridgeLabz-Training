@@ -5,7 +5,7 @@ Each topic is implemented in **separate folders** within the repository for clar
 
 ---
 
-### 🔹 Day 01 — Environment Setup & Programming Elements
+### 🔹 16 Dec 2025 — Environment Setup & Programming Elements
 **Activities**
 - Installed and configured **JDK**
 - Installed **Eclipse IDE**
@@ -20,7 +20,7 @@ Each topic is implemented in **separate folders** within the repository for clar
 
 ---
 
-### 🔹 Day 02 — Java Fundamentals
+### 🔹 17-18 Dec 2025 — Java Fundamentals
 **Activities**
 - Solved practice questions on Java fundamentals
 - Strengthened understanding of syntax and core concepts
@@ -34,7 +34,7 @@ Each topic is implemented in **separate folders** within the repository for clar
 
 ---
 
-### 🔹 Day 03 — Control Flow Statements
+### 🔹 19 Dec 2025 — Control Flow Statements
 **Activities**
 - Solved programming problems based on control flow
 - Implemented conditional and looping constructs
