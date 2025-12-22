@@ -60,3 +60,16 @@ Each topic is implemented in **separate folders** within the repository for clar
 - 📁 Arrays  
   🔗 Folder Link: [Click here](https://github.com/CodeByMohana/BridgeLabz-Training/tree/core-java-practice/core-java-practice/gcr-codebase/arrays)
 
+  ---
+  
+### 🔹 21 Dec 2025 — Strings
+**Activities**
+- Solved programming problems based on strings
+
+**Concepts Covered**
+- strings
+
+**Repository Reference**
+- 📁 Arrays  
+  🔗 Folder Link: [Click here](https://github.com/CodeByMohana/BridgeLabz-Training/tree/core-java-practice/core-java-practice/gcr-codebase/strings)
+
