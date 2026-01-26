@@ -1,0 +1,10 @@
+{
+  "id": 101,
+  "name": "Mohan Kumar",
+  "email": "mohan@example.com",
+  "age": 25,
+  "address": {
+    "city": "Bangalore",
+    "country": "India"
+  }
+}
