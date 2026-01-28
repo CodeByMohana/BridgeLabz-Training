@@ -20,6 +20,15 @@ public class LexicalTwist {
 		System.out.print("Enter the second word: ");
 		String secondWord = scanner.nextLine();
 		scanner.close();
+		
+		if (firstWord.trim().contains(" ")) {
+		    System.out.println(firstWord + " is an invalid word");
+		    return;
+		}
+		if (secondWord.trim().contains(" ")) {
+		    System.out.println(secondWord + " is an invalid word");
+		    return;
+		}
 
 		StringBuffer first = new StringBuffer(firstWord);
 		StringBuffer second = new StringBuffer(secondWord);
