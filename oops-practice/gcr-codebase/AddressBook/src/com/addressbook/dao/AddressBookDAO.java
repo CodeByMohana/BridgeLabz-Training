@@ -1,44 +1,80 @@
 package com.addressbook.dao;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
+import com.addressbook.model.AddressBook;
 import com.addressbook.model.Contact;
 
 public class AddressBookDAO {
-	ArrayList<Contact> contactList = new ArrayList<>();
+	Map<String, AddressBook> addressBooks = new HashMap<>();
+	private Map<String, List<Contact>> cityMap = new HashMap<>();
+	private Map<String, List<Contact>> stateMap = new HashMap<>();
 
-	public void addContact(Contact contact) {
-		contactList.add(contact);
+	public boolean createAddressBook(String name) {
+		String key = name.toLowerCase();
+		if (addressBooks.containsKey(key))
+			return false;
+		addressBooks.put(key, new AddressBook(name));
+		return true;
 	}
 
-	public boolean updateContactByFirstName(String firstName, String address, String city, String state, String zip,
-			String phoneNumber, String email) {
+	public AddressBook getAddressBook(String name) {
+		return addressBooks.get(name);
+	}
 
-		for (Contact contact : contactList) {
-			if (contact.getFirstName().equalsIgnoreCase(firstName)) {
-				contact.setAddress(address);
-				contact.setCity(city);
-				contact.setState(state);
-				contact.setPhoneNumber(phoneNumber);
-				contact.setEmail(email);
+	public Map<String, AddressBook> getAllAddressBooks() {
+		return addressBooks;
+	}
 
-				return true;
-			}
+	public List<Contact> getContactsByCity(String city) {
+		return cityMap.getOrDefault(city.toLowerCase(), new ArrayList<>());
+	}
+
+	public List<Contact> getContactsByState(String state) {
+		return stateMap.getOrDefault(state.toLowerCase(), new ArrayList<>());
+	}
+
+	public void addToCityIndex(Contact contact) {
+		String city = contact.getCity().toLowerCase();
+		cityMap.putIfAbsent(city, new ArrayList<>());
+		cityMap.get(city).add(contact);
+	}
+
+	public void addToStateIndex(Contact contact) {
+		String state = contact.getState().toLowerCase();
+		stateMap.putIfAbsent(state, new ArrayList<>());
+		stateMap.get(state).add(contact);
+	}
+
+	public void removeFromCityIndex(Contact contact) {
+		String city = contact.getCity().toLowerCase();
+		List<Contact> list = cityMap.get(city);
+		if (list != null) {
+			list.remove(contact);
+			if (list.isEmpty())
+				cityMap.remove(city);
 		}
-		return false;
 	}
 
-	public boolean deleteContactByFirstName(String firstName) {
-		Iterator<Contact> iterator = contactList.iterator();
-
-		while (iterator.hasNext()) {
-			Contact contact = iterator.next();
-			if (contact.getFirstName().equalsIgnoreCase(firstName)) {
-				iterator.remove();
-				return true;
-			}
+	public void removeFromStateIndex(Contact contact) {
+		String state = contact.getState().toLowerCase();
+		List<Contact> list = stateMap.get(state);
+		if (list != null) {
+			list.remove(contact);
+			if (list.isEmpty())
+				stateMap.remove(state);
 		}
-		return false;
 	}
+
+	public int getCountByCity(String city) {
+		return cityMap.getOrDefault(city.toLowerCase(), new ArrayList<>()).size();
+	}
+
+	public int getCountByState(String state) {
+		return stateMap.getOrDefault(state.toLowerCase(), new ArrayList<>()).size();
+	}
+
 }

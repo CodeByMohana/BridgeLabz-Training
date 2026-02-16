@@ -1,5 +1,7 @@
 package com.addressbook.model;
 
+import java.util.Objects;
+
 public class Contact {
 
 	private String firstName;
@@ -77,6 +79,27 @@ public class Contact {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	@Override
+	public String toString() {
+		return "Contact{" + "firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", city='" + city
+				+ '\'' + ", state='" + state + '\'' + ", phone='" + phoneNumber + '\'' + ", email='" + email + '\''
+				+ '}';
+	}
+
+	public int hashCode() {
+		return Objects.hash(firstName.toLowerCase(), lastName.toLowerCase());
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+		if (!(o instanceof Contact))
+			return false;
+		Contact contact = (Contact) o;
+		return firstName.equalsIgnoreCase(contact.firstName) && lastName.equalsIgnoreCase(contact.lastName);
 	}
 
 }
