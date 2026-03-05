@@ -3,7 +3,6 @@ package com.healthclinic.model;
 import java.sql.Date;
 
 public class Patient {
-	private int patientId;
 	private String name;
 	private Date dob;
 	private String contact;
